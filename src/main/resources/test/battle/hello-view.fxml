@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.battle.Controller">
+   <children>
+      <AnchorPane fx:id="paneAccueil" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #A9A9A9;" visible="false">
+         <children>
+            <Label fx:id="lblAccueil1" alignment="CENTER" layoutX="165.0" layoutY="62.0" text="Bienvenue dans Battle Game ! ">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAccueil2" alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="185.0" text="Le jeux est simple : Sélectionne ton skin et affronte ton adversaire ! ">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="188.0" fitWidth="178.0" layoutX="3.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@narrateur.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="253.0" layoutY="255.0" mnemonicParsing="false" onMouseClicked="#goToSelectPerso" text="Suivant" />
+            <Label fx:id="lblAccueil21" alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="107.0" text="Je suis le maître du jeux (avec la veste rouge)">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAccueil22" alignment="CENTER" contentDisplay="CENTER" layoutX="114.0" layoutY="143.0" text="et je serai là pour vous aider à comprendre Battle Game. ">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="paneSelectPerso" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #A9A9A9;" visible="false">
+         <children>
+            <ImageView fitHeight="159.0" fitWidth="152.0" layoutX="5.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@narrateur.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="121.0" layoutY="44.0" text="Choisis ton danseur !">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgViewSkinRichKJ1" fitHeight="120.0" fitWidth="71.0" layoutX="283.0" layoutY="36.0" onMouseClicked="#clickRichkJ1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photoKirish.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgViewSkinMaspaJ1" fitHeight="140.0" fitWidth="78.0" layoutX="280.0" layoutY="147.0" onMouseClicked="#clickMaspaJ1" pickOnBounds="true">
+               <image>
+                  <Image url="@photoMaspa.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgViewSkinMoustikJ1" fitHeight="93.0" fitWidth="134.0" layoutX="258.0" layoutY="282.0" onMouseClicked="#clickMoustikJ1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photoMoustik.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgViewSkinRichKJ2" fitHeight="126.0" fitWidth="142.0" layoutX="441.0" layoutY="34.0" onMouseClicked="#clickRichkJ2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photoKirish.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgViewSkinMaspaJ2" fitHeight="138.0" fitWidth="77.0" layoutX="442.0" layoutY="151.0" onMouseClicked="#clickMaspaj2" pickOnBounds="true">
+               <image>
+                  <Image url="@photoMaspa.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgViewSkinMoustikJ2" fitHeight="90.0" fitWidth="130.0" layoutX="418.0" layoutY="285.0" onMouseClicked="#clickMoustikJ2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photoMoustik.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtNomJoueur1" layoutX="244.0" layoutY="10.0" prefHeight="26.0" prefWidth="132.0" promptText="Joueur 1..." />
+            <TextField fx:id="txtNomJoueur2" layoutX="405.0" layoutY="11.0" prefHeight="26.0" prefWidth="136.0" promptText="Joueur 2..." />
+            <Button layoutX="83.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#goToBattle" prefHeight="32.0" prefWidth="55.0" text="Battle !" />
+            <Label layoutX="7.0" layoutY="168.0" prefHeight="32.0" prefWidth="216.0" text="Une fois que les deux joueurs">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="214.0" prefHeight="32.0" prefWidth="257.0" text="ont choisis leur pseudo et leur skin,">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="256.0" prefHeight="32.0" prefWidth="268.0" text="Lance la partie en cliquant sur Battle !">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="gifMoustikAirPose" fitHeight="10.0" fitWidth="10.0" layoutX="117.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@gif%20battle/MoustikAirPose.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gifMoustikHype" fitHeight="10.0" fitWidth="10.0" layoutX="135.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@gif%20battle/MoustikHype.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gifMoustikPopping" fitHeight="10.0" fitWidth="10.0" layoutX="153.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@gif%20battle/MoustikPopping.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gifRichKAirPose" fitHeight="10.0" fitWidth="10.0" layoutX="117.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@gif%20battle/RichKAirPose.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gifRichKHype" fitHeight="10.0" fitWidth="10.0" layoutX="133.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@gif%20battle/RichKHype.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gifRichKPopping" fitHeight="10.0" fitWidth="10.0" layoutX="150.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@gif%20battle/RichkPopping.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gifMaspaAirPose" fitHeight="10.0" fitWidth="10.0" layoutX="117.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@gif%20battle/maspaAirPose.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gifMaspaHype" fitHeight="10.0" fitWidth="10.0" layoutX="133.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@gif%20battle/maspaHype.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gifMaspaPopping" fitHeight="10.0" fitWidth="10.0" layoutX="150.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@gif%20battle/maspaPopping.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneBattle" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #A9A9A9;">
+         <children>
+            <ImageView fitHeight="114.0" fitWidth="159.0" layoutX="3.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@narrateur.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="89.0" layoutY="3.0" prefHeight="22.0" prefWidth="470.0" text="Vous trouverez des pas de danse à votre disposition en bas de votre écran.">
+               <font>
+                  <Font name="Comic Sans MS" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="22.0" prefHeight="22.0" prefWidth="470.0" text="Je suis le juge et j'aime certains enchainements plus que d'autres...">
+               <font>
+                  <Font name="Comic Sans MS" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="41.0" prefHeight="22.0" prefWidth="470.0" text="Entrez sur l'arène chacun votre tour et montrez moi qui est qui !">
+               <font>
+                  <Font name="Comic Sans MS" size="11.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="270.0" fitWidth="423.0" layoutX="85.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sceneFond.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="joueur1SurScene" fitHeight="84.0" fitWidth="62.0" layoutX="219.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="joueur2SurScene" fitHeight="71.0" fitWidth="62.0" layoutX="308.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="gif1J1" fitHeight="64.0" fitWidth="58.0" layoutX="42.0" layoutY="357.0" onMouseClicked="#clickExecuterGif1J1" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="gif2J1" fitHeight="64.0" fitWidth="58.0" layoutX="88.0" layoutY="357.0" onMouseClicked="#clickExecuterGif2J1" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="gif3J1" fitHeight="64.0" fitWidth="58.0" layoutX="146.0" layoutY="357.0" onMouseClicked="#clickExecuterGif3J1" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="gif1J2" fitHeight="64.0" fitWidth="58.0" layoutX="378.0" layoutY="353.0" onMouseClicked="#clickExecuterGif1J2" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="gif2J2" fitHeight="64.0" fitWidth="58.0" layoutX="436.0" layoutY="353.0" onMouseClicked="#clickExecuterGif2J2" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="gif3J2" fitHeight="64.0" fitWidth="58.0" layoutX="494.0" layoutY="353.0" onMouseClicked="#clickExecuterGif3J2" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="lblNomJoueur1" layoutX="215.0" layoutY="349.0" text="Label" />
+            <Label fx:id="lblNomJoueur2" layoutX="309.0" layoutY="349.0" text="Label" />
+            <Label layoutX="268.0" layoutY="348.0" prefWidth="23.0" text="VS" textFill="#cd2c2c">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </Label>
+            <Button layoutX="254.0" layoutY="373.0" mnemonicParsing="false" onMouseClicked="#goToResultat" text="Resultat" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="paneResultat" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #A9A9A9;" visible="false">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="79.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@narrateur.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="203.0" layoutY="55.0" text="Je ne m'attendais pas à autant de niveau !">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="187.0" layoutY="100.0" text="Le vainqueur de ce battle est...">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblResultat" layoutX="273.0" layoutY="188.0" text="label...">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="249.0" layoutY="331.0" text="Félicitations !">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
